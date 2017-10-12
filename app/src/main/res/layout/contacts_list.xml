@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel"
+        android:background="#ffffff"
+
+        >
+
+
+<!--
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/button2"
+            android:layout_gravity="right|bottom"
+            android:layout_alignBottom="@+id/rel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_contact_list"
+            android:layout_height="565dp"
+            android:layout_width="match_parent"
+            tools:context=".MainActivity"
+            android:background="#ffffff"
+            android:layout_marginBottom="40dp" />
+
+        <es.alfongj.contactswrv.presenter.RecyclerViewFastScroller
+            android:id="@+id/fastscroller"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/rv_contact_list"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/rv_contact_list"
+            android:clipToPadding="false"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/button2"
+        android:layout_gravity="right|bottom"
+        android:layout_alignBottom="@+id/rel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</FrameLayout>

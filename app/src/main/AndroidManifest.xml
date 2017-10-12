@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.alfongj.contactswrv" >
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name="es.alfongj.contactswrv.presenter.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="Invite Trusted Friends"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@layout/searchable_contacts" />
+        </activity>
+
+ <!--       <activity android:name=".ui.AddContact"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a719e4e11826fdcd060b9b743a0ad620e481067d" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
